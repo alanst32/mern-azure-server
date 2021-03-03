@@ -7,7 +7,7 @@ const serverConfig = {
     target: 'node',
     entry: './src/index.ts',
     output: {
-        path: path.join(__dirname, 'server', 'dist'),
+        path: path.join(__dirname, 'dist'),
         filename: 'bundle.js',
     },
     externals: [webpackNodeExternals()], // Does not include code from node_modules in the server-side bundle
