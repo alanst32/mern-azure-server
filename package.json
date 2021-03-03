@@ -1,0 +1,70 @@
+{
+    "name": "mern-azure-server",
+    "version": "1.0.0",
+    "description": "Server - MERN application with Azure Cosmos DB integration.",
+    "main": "webpack.config.cjs",
+    "scripts": {
+        "clean": "rimraf server/dist rimraf client/dist",
+        "webpack": "webpack --config webpack.config.cjs",
+        "dev": "webpack --mode development && nodemon",
+        "start": "npm run webpack && nodemon",
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/alanst32/mern-azure-2021.git"
+    },
+    "dependencies": {
+        "@babel/node": "^7.13.0",
+        "@babel/polyfill": "^7.12.1",
+        "@types/lodash": "^4.14.168",
+        "@types/mongoose": "^5.10.3",
+        "body-parser": "^1.19.0",
+        "commonjs": "0.0.1",
+        "cookie-parser": "^1.4.5",
+        "dotenv": "^8.2.0",
+        "ejs": "^3.1.6",
+        "express": "^4.17.1",
+        "file-loader": "^6.2.0",
+        "html-webpack-plugin": "^5.1.0",
+        "jest": "^26.6.3",
+        "js-loader": "^0.1.1",
+        "lodash": "^4.17.20",
+        "mongodb": "^3.6.4",
+        "mongoose": "^5.11.18",
+        "nodemon": "^2.0.7",
+        "npm-run-all": "^4.1.5",
+        "path": "^0.12.7",
+        "ts-loader": "^8.0.17",
+        "ts-node": "^9.1.1",
+        "webpack-target-webextension": "^0.4.0"
+    },
+    "keywords": [],
+    "author": "Alan Terriaga",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/alanst32/mern-azure-server/issues"
+    },
+    "homepage": "https://github.com/alanst32/mern-azure-server#readme",
+    "devDependencies": {
+        "@babel/cli": "^7.12.17",
+        "@babel/core": "^7.12.17",
+        "@babel/plugin-proposal-class-properties": "^7.13.0",
+        "@babel/plugin-transform-runtime": "^7.13.4",
+        "@babel/preset-env": "^7.12.17",
+        "@babel/preset-react": "^7.12.13",
+        "@types/dotenv": "^8.2.0",
+        "@types/express": "^4.17.11",
+        "@types/node": "^14.14.31",
+        "@types/react": "^17.0.2",
+        "@types/react-dom": "^17.0.1",
+        "@types/webpack-node-externals": "^2.5.0",
+        "babel-loader": "^8.2.2",
+        "babel-plugin-module-resolver": "^4.1.0",
+        "typescript": "^4.1.5",
+        "webpack": "^5.22.0",
+        "webpack-cli": "^4.5.0",
+        "webpack-dev-server": "^3.11.2",
+        "webpack-node-externals": "^2.5.2"
+    }
+}
