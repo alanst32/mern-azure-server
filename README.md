@@ -1,2 +1,3 @@
 # mern-azure-server
-Server - MERN application with Azure Cosmos DB integration
+2021 MERN application updated. Server Side
+Integration with ES6, NodeJS and Azure Cosmos DB.
