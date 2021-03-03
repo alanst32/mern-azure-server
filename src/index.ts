@@ -14,7 +14,6 @@ dotenv.config();
 
 // Connect to the Azure Cosmos DB
 mongoose.Promise = global.Promise;
-console.log(`getting URI: ${process.env.DATABASE_URI}`);
 mongoose.connect(
         `${process.env.DATABASE_URI}`, 
         {useNewUrlParser: true}
