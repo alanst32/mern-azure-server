@@ -77,6 +77,13 @@ async function insertStudent(req: Request<StudentInterface>, res: Response) {
  * @param res 
  */
 async function updateStudent(req: Request<StudentInterface>, res: Response) {
+    console.log(req.body);
+
+    if (!req.body && !req.body._id) {
+        res.status(400).send();
+        return;
+    }
+
     await Student
         .updateOne(
             {_id: { $in: req.body._id}},
@@ -106,6 +113,8 @@ async function deleteStudent(req: Request<any>, res: Response) {
         res.status(400).send();
         return;
     }
+
+    console.log(req.body);
 
     await Student
         .updateMany(
