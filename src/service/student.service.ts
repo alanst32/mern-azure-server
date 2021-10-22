@@ -33,7 +33,6 @@ async function getStudents(req: Request<StudentSearchRequestDto>, res: Response<
         .sort({firstName:1,lastName:1})
         .exec()
         .then(students => {
-            console.log('**** SUCCESS');
             return res.send(students);
         })
         .catch(err => {
