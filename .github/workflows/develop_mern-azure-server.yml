@@ -9,9 +9,18 @@ on:
       - develop
   workflow_dispatch:
 
+env:
+  AZURE_WEBAPP_NAME: mern-azure-server   # set this to your application's name
+  NODE_VERSION: '14.x'                # set this to the node version to use
+  AZURE_WEBAPP_PACKAGE_PATH: '.'
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x, 15.x]
 
     steps:
       - uses: actions/checkout@v2
@@ -27,14 +36,14 @@ jobs:
           npm run build --if-present
           # npm run test --if-present
 
-      - name: 'Deploy to Azure Web App'
+      - name: 'Deploy to Azure WebApp'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
-        with:
-          app-name: 'mern-azure-server'
+        with: 
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DC295D2AC73E4BA3BDF389D0E358326A }}
-          package: .
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
 
       # - name: Upload artifact for deployment job
       #   uses: actions/upload-artifact@v2
