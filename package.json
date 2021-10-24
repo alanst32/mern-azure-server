@@ -7,7 +7,8 @@
         "clean": "rimraf dist",
         "webpack": "webpack --config webpack.config.cjs",
         "dev": "webpack --mode development && nodemon",
-        "start": "npm run webpack && nodemon",
+        "build": "npm run webpack",
+        "start": "npm run build && nodemon",
         "test": "jest --runInBand"
     },
     "repository": {
