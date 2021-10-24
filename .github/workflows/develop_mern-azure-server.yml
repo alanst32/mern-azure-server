@@ -12,15 +12,15 @@ on:
 env:
   AZURE_WEBAPP_NAME: mern-azure-server   # set this to your application's name
   NODE_VERSION: '14.x'                # set this to the node version to use
-  AZURE_WEBAPP_PACKAGE_PATH: '.'
+  AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [10.x, 12.x, 14.x, 15.x]
+    # strategy:
+    #   matrix:
+    #     node-version: [10.x, 12.x, 14.x, 15.x]
 
     steps:
       - uses: actions/checkout@v2
@@ -41,9 +41,10 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
-          slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DC295D2AC73E4BA3BDF389D0E358326A }}
-          package: .
+          # slot-name: 'Production'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
+          # publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DC295D2AC73E4BA3BDF389D0E358326A }}
+          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
 
       # - name: Upload artifact for deployment job
       #   uses: actions/upload-artifact@v2
