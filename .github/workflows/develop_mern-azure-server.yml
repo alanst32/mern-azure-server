@@ -36,14 +36,14 @@ jobs:
           npm run build --if-present
           # npm run test --if-present
 
-      - name: 'Deploy to Azure WebApp'
+      - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
-        with: 
+        with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DC295D2AC73E4BA3BDF389D0E358326A }}
+          package: .
 
       # - name: Upload artifact for deployment job
       #   uses: actions/upload-artifact@v2
