@@ -7,11 +7,10 @@
         "clean": "rimraf dist",
         "webpack": "node_modules/.bin/webpack --config webpack.config.cjs",
         "dev": "webpack --mode development && nodemon",
-        "build": "npm run webpack",
         "start": "npm run build",
         "local": "npm run build && nodemon",
         "test": "jest --runInBand",
-        "azure": "node_modules/.bin/webpack --config webpack.config.cjs"
+        
     },
     "repository": {
         "type": "git",
