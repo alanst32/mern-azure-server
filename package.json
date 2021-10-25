@@ -8,7 +8,8 @@
         "webpack": "webpack --config webpack.config.cjs",
         "dev": "webpack --mode development && nodemon",
         "build": "npm run webpack",
-        "start": "npm run build && nodemon",
+        "start": "npm run build",
+        "local": "npm run build && nodemon",
         "test": "jest --runInBand"
     },
     "repository": {
