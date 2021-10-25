@@ -9,7 +9,8 @@
         "dev": "webpack --mode development && nodemon",
         "build": "npm run webpack",
         "start": "npm run build && nodemon",
-        "test": "jest --runInBand"
+        "test": "jest --runInBand",
+        "azure": "tsc --project ." 
     },
     "repository": {
         "type": "git",
