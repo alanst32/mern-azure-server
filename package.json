@@ -43,16 +43,7 @@
         "ts-loader": "^8.0.17",
         "ts-node": "^9.1.1",
         "uuid": "^8.3.2",
-        "webpack-target-webextension": "^0.4.0"
-    },
-    "keywords": [],
-    "author": "Alan Terriaga",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/alanst32/mern-azure-server/issues"
-    },
-    "homepage": "https://github.com/alanst32/mern-azure-server#readme",
-    "devDependencies": {
+        "webpack-target-webextension": "^0.4.0",
         "@babel/cli": "^7.12.17",
         "@babel/core": "^7.12.17",
         "@babel/plugin-proposal-class-properties": "^7.13.0",
@@ -80,5 +71,12 @@
         "webpack-cli": "^4.5.0",
         "webpack-dev-server": "^3.11.2",
         "webpack-node-externals": "^2.5.2"
-    }
+    },
+    "keywords": [],
+    "author": "Alan Terriaga",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/alanst32/mern-azure-server/issues"
+    },
+    "homepage": "https://github.com/alanst32/mern-azure-server#readme"
 }
