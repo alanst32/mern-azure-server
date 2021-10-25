@@ -9,7 +9,7 @@
         "dev": "webpack --mode development && nodemon",
         "start": "npm run build",
         "local": "npm run build && nodemon",
-        "test": "jest --runInBand",
+        "test": "jest --runInBand"
         
     },
     "repository": {
