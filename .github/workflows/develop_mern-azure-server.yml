@@ -17,6 +17,9 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: 'Production'
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     # strategy:
     #   matrix:
@@ -33,7 +36,7 @@ jobs:
       - name: npm install, build, and test
         run: |
           npm install --only=dev && npm install
-          npm run build --if-present
+          npm run azure --if-present
           # npm run test --if-present
 
       - name: 'Deploy to Azure Web App'
