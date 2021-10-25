@@ -5,7 +5,7 @@
     "main": "webpack.config.cjs",
     "scripts": {
         "clean": "rimraf dist",
-        "webpack": "webpack --config webpack.config.cjs",
+        "webpack": "node_modules/.bin/webpack --config webpack.config.cjs",
         "dev": "webpack --mode development && nodemon",
         "build": "npm run webpack",
         "start": "npm run build",
