@@ -21,9 +21,9 @@ jobs:
       name: 'Production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
-    # strategy:
-    #   matrix:
-    #     node-version: [10.x, 12.x, 14.x, 15.x]
+    strategy:
+      matrix:
+        node-version: [14.x, 15.x]
 
     steps:
       - uses: actions/checkout@v2
@@ -36,8 +36,7 @@ jobs:
       - name: npm install, build, and test
         run: |
           npm install --only=dev && npm install
-          npm run azure --if-present
-          # npm run test --if-present
+          npm run azure 
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp

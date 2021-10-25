@@ -4,13 +4,8 @@
     "description": "Server - MERN application with Azure Cosmos DB integration.",
     "main": "webpack.config.cjs",
     "scripts": {
-        "clean": "rimraf dist",
-        "webpack": "node_modules/.bin/webpack --config webpack.config.cjs",
-        "dev": "webpack --mode development && nodemon",
-        "start": "npm run build",
-        "local": "npm run build && nodemon",
-        "test": "jest --runInBand"
         
+        "azure": "node_modules/.bin/webpack --config webpack.config.cjs"
     },
     "repository": {
         "type": "git",
